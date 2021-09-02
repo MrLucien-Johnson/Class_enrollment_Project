@@ -3,9 +3,15 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://user:password@0.0.0.0:5000/classEnroll_db'
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///classEnroll.db"
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
+
+
+
+db.drop_all()
+db.create_all()
 ## drop all tables if any
 ##db.drop_all()
 ## create all tables based on 
