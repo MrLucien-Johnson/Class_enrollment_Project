@@ -9,10 +9,14 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
 ## setup database models
+## setup student table
 class Student(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
+    student_id = db.Column(db.Integer, primary_key=True)
     first_name = db.Column(db.String(45), nullable=False)
     last_name = db.Column(db.String(100), nullable=False)
+## setup classes table 
+
+## setup join table
 
 ## drop database if exists
 db.drop_all()
