@@ -8,14 +8,18 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
 
+## setup database models
+class Student(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    first_name = db.Column(db.String(45), nullable=False)
+    last_name = db.Column(db.String(100), nullable=False)
 
-
+## drop database if exists
 db.drop_all()
+## create database 
 db.create_all()
-## drop all tables if any
-##db.drop_all()
-## create all tables based on 
-##db.create_all()
+
+
 
 @app.route('/')
 def no_url():
@@ -28,6 +32,8 @@ def home_url():
 @app.route('/enroll')
 def enroll_url():
     return  "Hello future students"
+
+
 
 if __name__=='__main__':
     app.run(debug=True, host='0.0.0.0')
