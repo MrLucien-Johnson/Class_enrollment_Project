@@ -1,8 +1,15 @@
 from flask import *
+from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://user:password@123.45.6.78:3306/class_enrollment_Project'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://user:password@0.0.0.0:5000/classEnroll_db'
+
+db = SQLAlchemy(app)
+## drop all tables if any
+##db.drop_all()
+## create all tables based on 
+##db.create_all()
 
 @app.route('/')
 def no_url():
