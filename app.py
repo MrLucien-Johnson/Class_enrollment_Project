@@ -41,7 +41,7 @@ db.create_all()
 
 
 
-@app.route('/')
+""" @app.route('/')
 def no_url():
     return  redirect('/home')
 
@@ -51,7 +51,7 @@ def home_url():
 
 @app.route('/enroll')
 def enroll_url():
-    return  "Hello future students"
+    return  "Hello future students" """
 
 
 
