@@ -1,3 +1,4 @@
+import os
 from app import db, Student
 
 db.drop_all()
