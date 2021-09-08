@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% block title %}
+<title>Layout</title>
+{% endblock title %}
+</head>
+
+<body>
+<div class="navbar">
+<a href="{{url_for('home')}}">Home</a>
+<a href="{{url_for('addStudent')}}">Add a Student</a>
+<a href="{{url_for('addClasses')}}">Add a Classes</a>
+<a href="{{url_for('deleteStudent')}}">Delete Students</a>
+<a href="{{url_for('deleteClasses')}}">Delete Classes</a>
+<a href="{{url_for('updateClasses')}}">Update classes</a>
+
+
+
+</div>
+
+{% block body %}
+
+{% endblock body %}
+        
+</body>
+</html>
