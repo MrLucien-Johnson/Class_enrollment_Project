@@ -25,7 +25,6 @@
 
 {% endfor %} 
 
-
 <h2>Classes</h2>
 | classes_name | classes_day |
 {% for classes in allClasses %}
@@ -35,7 +34,9 @@
 <th>| {{ classes.classes_name }} | {{ classes.classes_day }} |</th>
 </tr>
 </table>
-                    
+<form action="{{ url_for('updateClassesInfo', id=classes.id) }}">
+    <input type=submit value="Update">
+    </form>                   
 
 {% endfor %} 
 

@@ -83,6 +83,21 @@ def updateStudentInfo(id):
     
     return render_template('updateStudentInfo.html', form=form)
 
+@app.route('/updateClassesInfo/<int:id>', methods=['GET', 'POST'])
+def updateClassesInfo(id):
+    form = ClassesForm()       
+    chosenClasses = Classes.query.filter_by(id=id).first() 
+    chosenClassesId = Classes.query.get(id)  
+    if request.method == 'POST' and form.validate_on_submit():
+        message = f"""Changes: 
+            {chosenClasses.classes_name} to {form.classes_name.data}, 
+            {chosenClasses.classes_day} to {form.classes_day.data}"""
+        chosenClasses.classes_name = form.classes_name.data
+        chosenClasses.classes_day = form.classes_day.data
+        db.session.commit()
+        flash(message)
+        return render_template('updateClassesInfo.html', chosenClassesId=chosenClassesId, form=form )
+    return render_template('updateClassesInfo.html', form=form)
 
 @app.route('/updateClasses', methods=['GET', 'POST'])
 def updateClasses():
@@ -96,28 +111,6 @@ def updateClasses():
         chosenClassesId = form.Classes_id.data
         return redirect(url_for('updateClassesInfo', chosenClassesId=chosenClassesId))
     return render_template('updateClasses.html', form=form)
-
-@app.route('/updateClasssesInfo/<chosenClassesId>', methods=['GET', 'POST'])
-def updateClassesInfo(chosenClassesId):
-    form = ClassesForm()
-    chosenClasses = Classes.query.get(int(chosenClassesId))
-    allClasses = Classes.query.all()      
-    for team in allClasses:
-        form.fk_Classes_id.choices.append(
-            (Classes.id, f"{Classes.classes_name}")      
-        )
-    if request.method == 'POST' and form.validate_on_submit():
-        message = f"""Changes: 
-            {chosenClasses.classes_name} to {form.classes_name.data}, 
-            {chosenClasses.classes_day} to {form.classes_day.data}"""
-
-        chosenClasses.fk_classes_id = form.fk_classes_id.data
-        chosenClasses.classes_name = form.classes_name.data
-        chosenClasses.classes_day = form.classes_day.data
-        db.session.commit()
-        flash(message)
-        return redirect(url_for('updateClasses', chosenClassesId=chosenClassesId))
-    return render_template('updateClassesInfo.html', form=form)
 
 @app.route('/deleteStudent', methods=['GET', 'POST'])
 def deleteStudent():

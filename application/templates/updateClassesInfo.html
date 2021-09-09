@@ -7,13 +7,13 @@
 
 <body>
 {% block body %}
-<h1>Update Classes info page</h1>
+<h1>Update Classes information page</h1>
 
 <div class="form">
 <form action="" method="POST">
 {{ form.hidden_tag() }}
 {{ form.classes_name.label }}: {{ form.classes_name }} <br>
-
+{{ form.classes_day.label }}: {{ form.classes_day }} <br>
                 
 {{ form.submit }}<br>
 </form>
