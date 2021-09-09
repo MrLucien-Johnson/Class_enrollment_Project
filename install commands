@@ -1,0 +1,20 @@
+install venv
+source venv/scripts/activate
+
+pip install Flask-WTF
+pip install WTForms
+pip install -U Flask
+pip install flask_sqlalchemy
+
+pull project 
+
+#export database uri
+#export secret key
+pytest
+
+py create.py
+py app.py
+
+load to webserver
+
+can all be done in jenkins

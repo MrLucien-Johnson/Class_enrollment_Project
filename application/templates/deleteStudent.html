@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+<head>
+{% block title %}
+<title>Delete Student</title>
+{% endblock title %}
+</head>
+
+<body>
+    {% block body %}
+    <div class="form">
+    <form action="" method="POST">
+    {{ form.hidden_tag() }}
+    {{ form.student_id.label }}: {{ form.student_id }} <br>
+    {{ form.submit }}<br>
+    </form>
+    {{ message }}
+   </div>
+   
+   {% endblock body %}
+</body>
