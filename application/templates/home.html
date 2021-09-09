@@ -1,0 +1,60 @@
+{% extends 'layout.html' %}
+<head>
+{% block title %}
+<title>Home</title>
+{% endblock title %}
+</head>
+
+<body>
+{% block body %}
+<h1>HOME</h1>
+
+<h2>Students</h2>
+| student_name | student_age | student_city |
+{% for student in allStudents %}
+<div>
+<table>
+<tr>
+<th>| {{ student.student_name }} | {{ student.student_age }} | {{ student.student_city }} |</th>
+</tr>
+</table>                    
+<form action="{{ url_for('updateStudentInfo', id=student.id) }}">
+    <input type=submit value="Update">
+    </form>
+
+
+{% endfor %} 
+
+<h2>Classes</h2>
+| classes_name | classes_day |
+{% for classes in allClasses %}
+<div>
+<table>
+<tr>
+<th>| {{ classes.classes_name }} | {{ classes.classes_day }} |</th>
+</tr>
+</table>
+<form action="{{ url_for('updateClassesInfo', id=classes.id) }}">
+    <input type=submit value="Update">
+    </form>                   
+
+{% endfor %} 
+
+
+
+
+
+<h2>Linked</h2>
+| fk_classes_id | fk_student_id |
+{% for linked in allLinked %}
+<div>
+<table>
+<tr>
+<th>| {{ linked.fk_classes_id }} | {{ linked.fk_student_id }} |</th>
+</tr>
+</table>
+                    
+
+{% endfor %} 
+{% endblock body %}
+</body>
