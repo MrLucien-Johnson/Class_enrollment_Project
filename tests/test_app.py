@@ -89,8 +89,17 @@ class TestAddStudent(TestBase):
 class TestUpdateStudent(TestBase):
     def test_update_student(self):
         response = self.client.post(
-            url_for('updateStudent', qid=1),
+            url_for('updateStudentInfo', id=1),
             data = dict(studnet_name="testupdate",student_age=30 , student_city="Update"),
+            follow_redirects=True
+        )
+        self.assertIn(b'Home',response.data)
+
+class TestUpdateClasses(TestBase):
+    def test_update_classes(self):
+        response = self.client.post(
+            url_for('updateClassesInfo', id=1),
+            data = dict(classes_name="testupdate",classes_day="wednesday"),
             follow_redirects=True
         )
         self.assertIn(b'Home',response.data)
