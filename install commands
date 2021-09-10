@@ -5,6 +5,8 @@ pip install Flask-WTF
 pip install WTForms
 pip install -U Flask
 pip install flask_sqlalchemy
+pip install flask-Testing
+pip3 install -r requirements.txt
 
 pull project 
 

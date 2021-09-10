@@ -3,3 +3,6 @@ venv/
 venv\
 flask-class-enroll/
 flask-class-enroll\
+
+\.pytest_cache
+appliction\__pycache__\*
