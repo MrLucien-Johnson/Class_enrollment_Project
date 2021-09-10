@@ -29,10 +29,16 @@ Jenkins will be used as a build server which specialises in automation and testi
 
 ## Testing
 
+
 ## The App
 
-## Updates
 
 ## Known Issues
+Linked table had not been utilised 
+
 
 ## Future Work
+There are a number of future improvements needed on this project.
+Utilising the linked table to add a student and a class to create a booking. This would make the program usable in an enrollment environment. The database model has been successfully created and can be utilised however front end will need to be improved.
+
+* UI UX - The look and feel of the application is very simplistic and could do with an overhaul on design
