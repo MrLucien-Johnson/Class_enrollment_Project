@@ -17,7 +17,11 @@ The proposed aim of this project was to create a workking web application with a
 This web application must have CRUD (create, read, update and delete) functionality, utilisation of the Flask micro-framework containing a relational database supporting join tables. 
 
 ## App Design
-The applicaiton i have chosen to build will be a student class enrollment system which allows users to create a user name (create functionality) view a range of classes (read functionality), select a number of classes to attend (update functionality) and remove the selected class from class list (delete functionality)
+The applicaiton i have chosen to build will be a student class enrollment system which allows users to create a user name (create functionality) delete user information (delete functionality) and update user information (update functionality) view a range of classes (read functionality) delete a range of classes (delete functionality) and update a number of classes (update functionality).
+
+![EarlyERD](https://github.com/MrLucien-Johnson/Class_enrollment_Project/blob/dtests/images/early_erd.png)
+
+![UpdatedERD](https://github.com/MrLucien-Johnson/Class_enrollment_Project/blob/dtests/images/currentERD.png)
 
 ## CI Pipeline 
 
