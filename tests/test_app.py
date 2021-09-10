@@ -32,7 +32,7 @@ def setUp(self):
         db.session.add(s1)
         db.session.commit()
 
-        c1 = Classes(classes_name = 'friday', classes_day = "monday")
+        c1 = Classes(classes_name = 'Maths', classes_day = "monday")
         db.session.add(c1)
         db.session.commit()
 
@@ -103,3 +103,19 @@ class TestUpdateClasses(TestBase):
             follow_redirects=True
         )
         self.assertIn(b'Home',response.data)
+
+class TestDelStudent(TestBase):
+    def test_del_student(self):
+        response = self.client.get(url_for('deleteStudent'), 
+        data = dict(studnet_name="test",student_age=26 , student_city="London"),
+        follow_redirects=True)
+        self.assertEqual(response.status_code, 200)
+        self.assertNotIn(b'test', response.data)
+
+class TestDelClasses(TestBase):
+    def test_del_classes(self):
+        response = self.client.get(url_for('deleteClasses'), 
+        data = dict(classes_name = 'Maths', classes_day = "monday"),
+        follow_redirects=True)
+        self.assertEqual(response.status_code, 200)
+        self.assertNotIn(b'Maths', response.data)
