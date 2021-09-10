@@ -1,4 +1,8 @@
-install venv
+sudo apt-get update
+sudo apt install python3-pip
+my keypare is called secret key not my secret key for database
+pip install venv
+py -m venv venv
 source venv/scripts/activate
 
 pip install Flask-WTF
@@ -6,7 +10,7 @@ pip install WTForms
 pip install -U Flask
 pip install flask_sqlalchemy
 pip install flask-Testing
-pip3 install -r requirements.txt
+pip install -r requirements.txt
 
 pull project 
 
