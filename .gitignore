@@ -10,3 +10,4 @@ application/__pycache__/*
 /__pycache__/
 \__pycache__\
 /install_commands
+.coverage
