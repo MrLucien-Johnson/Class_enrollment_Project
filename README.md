@@ -41,8 +41,13 @@ Risk assessment:
 ![RiskAssesment](https://github.com/MrLucien-Johnson/Class_enrollment_Project/blob/readme/images/riskassesment.png)
 
 ## Testing
-
+An essential part of the development process was testing the app :  
+* Unit testing tests _units of functionality_ (i.e functions) within the app. To ensure that the CRUD (create, read, update and delete) functionality worked as intended, unit tests were written. Unit tests test the units of functionality within the app. ie. the functions of the app.
 ![TestsCoverage](https://github.com/MrLucien-Johnson/Class_enrollment_Project/blob/readme/images/TestsCoverage.png)
+This image shows the tests being ran and the output of tests success, showing 81% coverage overall. 
+
+Running tests thorugh jenkins would sujest that for a build to be successful all tests must pass, any single failed test marks the build overall as failed.
+
 
 ## The App
 
