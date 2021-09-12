@@ -44,7 +44,9 @@ The utilisation of systemD service, which is to run the flask application throug
 
 
 ## Known Issues
-Linked table had not been utilised 
+* Linked table had not been utilised 
+* Jenkins not setup with SystemD
+* No external databse
 
 
 ## Future Work
@@ -52,3 +54,4 @@ There are a number of future improvements needed on this project.
 Utilising the linked table to add a student and a class to create a booking. This would make the program usable in an enrollment environment. The database model has been successfully created and can be utilised however front end will need to be improved.
 
 * UI UX - The look and feel of the application is very simplistic and could do with an overhaul on design
+* Create and link external databse hiding secrets using env
