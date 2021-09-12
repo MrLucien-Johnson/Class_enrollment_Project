@@ -42,6 +42,10 @@ Risk assessment:
 
 ![RiskAssesment](https://github.com/MrLucien-Johnson/Class_enrollment_Project/blob/readme/images/riskassesment.png)
 
+* SQLAlchemy was used with Flask to prevent SQL commands being sent directly to the database.
+* Credentials stored as secret texts on Jenkins VM and exported as environment variables to avoid accidentally publishing confidential details.
+*  After the implementation of control measures, the likelihood and impact of each risk identified were estimated out of 5 to quantify the effect of implementing the measures.
+
 ## Testing
 An essential part of the development process was testing the app :  
 * To ensure that the CRUD (create, read, update and delete) functionality worked as intended, unit tests were written. Unit tests test the units of functionality within the app. ie. the functions of the app.
