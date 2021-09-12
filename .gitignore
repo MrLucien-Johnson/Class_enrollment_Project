@@ -5,8 +5,8 @@ flask-class-enroll/
 flask-class-enroll\
 /classEnroll.db
 \.pytest_cache
-application\__pycache__\*
-application/__pycache__/*
+application\__pycache__
+application/__pycache__
 /__pycache__/
 \__pycache__\
 /.coverage
