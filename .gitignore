@@ -9,4 +9,5 @@ application\__pycache__\*
 application/__pycache__/*
 /__pycache__/
 \__pycache__\
-.coverage
+/.coverage
+
