@@ -42,6 +42,10 @@ Risk assessment:
 
 ![RiskAssesment](https://github.com/MrLucien-Johnson/Class_enrollment_Project/blob/readme/images/riskassesment.png)
 
+* SQLAlchemy was used with Flask to prevent SQL commands being sent directly to the database.
+* Credentials stored as secret texts on Jenkins VM and exported as environment variables to avoid accidentally publishing confidential details.
+*  After the implementation of control measures, the likelihood and impact of each risk identified were estimated out of 5 to quantify the effect of implementing the measures.
+
 ## Testing
 An essential part of the development process was testing the app :  
 * To ensure that the CRUD (create, read, update and delete) functionality worked as intended, unit tests were written. Unit tests test the units of functionality within the app. ie. the functions of the app.
@@ -55,6 +59,21 @@ Running tests thorugh jenkins would sujest that for a build to be successful all
 once tha application is navigated to, the home screen will be shown. Displaying the contents of the database and providing a navigation bar to add and delete students and classes.
 ![HomePage] (https://github.com/MrLucien-Johnson/Class_enrollment_Project/blob/readme/images/homepage.png)
 
+To choose to populate the database and add a student once clicked on the href in the navigation bar you will be redirected to :
+![AddStudent](https://github.com/MrLucien-Johnson/Class_enrollment_Project/blob/readme/images/addstudent.png)
+
+To choose to populate the database and add classes once clicked on the href in the navigation bar you will be redirected to :
+![AddClasses](https://github.com/MrLucien-Johnson/Class_enrollment_Project/blob/readme/images/addclasses.png)
+
+To choose to remove Students from the database and add classes once clicked on the href in the navigation bar you will be redirected to :
+![DeleteStudent](https://github.com/MrLucien-Johnson/Class_enrollment_Project/blob/readme/images/deletestudent.png)
+
+To choose to remove Classes from the database and add classes once clicked on the href in the navigation bar you will be redirected to :
+![DeleteClasses](https://github.com/MrLucien-Johnson/Class_enrollment_Project/blob/readme/images/deleteclasses.png)
+
+To update a class or student an update button will be present for each record and will redirect you to the student/classes update pages respectively:
+![UpdateStudent](https://github.com/MrLucien-Johnson/Class_enrollment_Project/blob/readme/images/updatestudent.png)
+![UpdateClasses](https://github.com/MrLucien-Johnson/Class_enrollment_Project/blob/readme/images/updateclasses.png)
 
 ## Known Issues
 * Linked table had not been utilised 
