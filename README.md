@@ -38,6 +38,7 @@ The utilisation of systemD service, which is to run the flask application throug
 
 ## Testing
 
+![TestsCoverage](https://github.com/MrLucien-Johnson/Class_enrollment_Project/blob/readme/images/TestsCoverage.png)
 
 ## The App
 
