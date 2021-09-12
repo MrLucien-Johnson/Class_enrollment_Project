@@ -7,3 +7,4 @@ flask_testing
 pytest
 pytest-cov
 coverage
+python3-venv
