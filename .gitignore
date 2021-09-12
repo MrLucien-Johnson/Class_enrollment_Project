@@ -10,4 +10,4 @@ application/__pycache__/*
 /__pycache__/
 \__pycache__\
 /.coverage
-
+tests/__pycache__
