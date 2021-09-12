@@ -17,17 +17,24 @@ The proposed aim of this project was to create a workking web application with a
 This web application must have CRUD (create, read, update and delete) functionality, utilisation of the Flask micro-framework containing a relational database supporting join tables. 
 
 ## App Design
-The applicaiton i have chosen to build will be a student class enrollment system which allows users to create a user name (create functionality) delete user information (delete functionality) and update user information (update functionality) view a range of classes (read functionality) delete a range of classes (delete functionality) and update a number of classes (update functionality).
+The applicaiton i have chosen to build will be a student class enrollment system which allows users to create a user name (create functionality) update their user information (update functionality), create a class (create functionality), remove a student from the list(delete functionality) update the list of classes information (update functionality) view a range of classes (read functionality), select a number of classes to attend (update functionality) and remove the selected class from class list (delete functionality)
+An initial ERD sample design was instructed to gauge the relations between the database models:
+![Initial ERD](https://github.com/MrLucien-Johnson/Class_enrollment_Project/blob/readme/images/early_erd.png)
 
-![EarlyERD](https://github.com/MrLucien-Johnson/Class_enrollment_Project/blob/dtests/images/early_erd.png)
+Improvements were made to this initial ERD inorder to achive the current working ERD satisfying the join table requirements.
 
-![UpdatedERD](https://github.com/MrLucien-Johnson/Class_enrollment_Project/blob/dtests/images/currentERD.png)
+![Current ERD](https://github.com/MrLucien-Johnson/Class_enrollment_Project/blob/readme/images/currentERD.png)
 
 ## CI Pipeline 
 Due to the technical nature of this project and in order to ensure continuous integration and delivery, i found it important to utilise CI pipelining.
-These in for of version controll, using git hub and working on brnaches. The project stored on an online git repo allowing the use in different environments especially that is is an aim to be able to run this application on an AWS ect instance while utilising jenkins. Project tracking in which i used a trello kanban board. This board included my user stories in which i worked out my story points utilising MoSCow (Must, Should,could have)
+Version controll was utilised, using github and working on brnaches. The project is stored on an online git repository allowing the use in different environments especially. The aim is to be able to run this application on an AWS ec2 instance while utilising jenkins. Project tracking in which i used a trello kanban board. This board included my user stories in which i worked out my story points utilising MoSCow (Must, Should,could have)
+![Trello](https://github.com/MrLucien-Johnson/Class_enrollment_Project/blob/readme/images/trello.png)
 
-Jenkins will be used as a build server which specialises in automation and testing. For this project it was deemed neccessary that the project type would be that of a freestyle project which executes the test.sh script when it recieves a webhook from github any time a commit is made and pushed.
+Jenkins has be used as a build server which specialises in automation and testing. For this project it was deemed neccessary that the project type would be that of a freestyle project which executes the test.sh script when it recieves a webhook from github any time a commit is made and pushed. When building using jenkins the build will not complete as the flask application will show as a running process and therefore would not be able to complete and close the build.
+
+![Jenkins](https://github.com/MrLucien-Johnson/Class_enrollment_Project/blob/readme/images/CI-with-Jenkins-Git.png)
+
+The utilisation of systemD service, which is to run the flask application through jenkins onto the system that it is being accessed from. This would in turn allow the build to succeed by replacing program files which allow the running of the flask application as a process on the system. 
 
 ## Risk Assessment
 In order to identify risks and propose measures to control these risks, a risk assessment was undertaken prior to building the app. Then in the flask app these identified measures could then be implemented. 
@@ -45,13 +52,14 @@ Running tests thorugh jenkins would sujest that for a build to be successful all
 
 
 ## The App
+once tha application is navigated to, the home screen will be shown. Displaying the contents of the database and providing a navigation bar to add and delete students and classes.
+![HomePage] (https://github.com/MrLucien-Johnson/Class_enrollment_Project/blob/readme/images/homepage.png)
 
 
 ## Known Issues
 * Linked table had not been utilised 
 * Jenkins not setup with SystemD
 * No external databse
-
 
 ## Future Work
 There are a number of future improvements needed on this project.
