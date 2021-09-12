@@ -21,7 +21,6 @@ The applicaiton i have chosen to build will be a student class enrollment system
 
 ![Initial ERD](https://github.com/MrLucien-Johnson/Class_enrollment_Project/blob/readme/images/early_erd.png)
 
-
 ![Current ERD](https://github.com/MrLucien-Johnson/Class_enrollment_Project/blob/readme/images/currentERD.png)
 
 ## CI Pipeline 
