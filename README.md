@@ -27,10 +27,10 @@ Improvements were made to this initial ERD inorder to achive the current working
 
 ## CI Pipeline 
 Due to the technical nature of this project and in order to ensure continuous integration and delivery, i found it important to utilise CI pipelining.
-Version controll was utilised, using github and working on brnaches. The project is stored on an online git repository allowing the use in different environments especially. The aim is to be able to run this application on an AWS ec2 instance while utilising jenkins. Project tracking in which i used a trello kanban board. This board included my user stories in which i worked out my story points utilising MoSCow (Must, Should,could have)
+Version controll was utilised, using github and working on branches. The project is stored on an online git repository allowing the use in different environments especially. The aim is to be able to run this application on an AWS ec2 instance while utilising jenkins. Project tracking in which i used a trello kanban board. This board included my user stories in which i worked out my story points utilising MoSCoW (Must, Should, could and wont haves)
 ![Trello](https://github.com/MrLucien-Johnson/Class_enrollment_Project/blob/readme/images/trello.png)
 
-Jenkins has be used as a build server which specialises in automation and testing. For this project it was deemed neccessary that the project type would be that of a freestyle project which executes the test.sh script when it recieves a webhook from github any time a commit is made and pushed. When building using jenkins the build will not complete as the flask application will show as a running process and therefore would not be able to complete and close the build.
+Jenkins has be used as a build server which specialises in automation and testing. For this project it was deemed neccessary that the project type would be that of a freestyle project which executes the test.sh script when it recieves a webhook from github, any time a commit is made and pushed. When building using jenkins the build will not complete as the flask application will show as a running process and therefore would not be able to complete and close the build.
 
 ![Jenkins](https://github.com/MrLucien-Johnson/Class_enrollment_Project/blob/readme/images/CI-with-Jenkins-Git.png)
 
