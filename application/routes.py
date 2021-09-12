@@ -41,7 +41,7 @@ def addStudent():
             )
         db.session.add(newStudent)
         db.session.commit()
-        message = f"You have added the student: {form.student_name.data} {form.student_age.data} located in {form.student_city}"
+        message = f"You have added the student: {form.student_name.data} {form.student_age.data} located in {form.student_city.data}"
         return render_template('addStudent.html', form=form, message=message)    
     else:
         return render_template('addStudent.html', form=form)
