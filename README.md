@@ -20,7 +20,9 @@ This web application must have CRUD (create, read, update and delete) functional
 The applicaiton i have chosen to build will be a student class enrollment system which allows users to create a user name (create functionality) update their user information (update functionality), create a class (create functionality), remove a student from the list(delete functionality) update the list of classes information (update functionality) view a range of classes (read functionality), select a number of classes to attend (update functionality) and remove the selected class from class list (delete functionality)
 An initial ERD sample design was instructed to gauge the relations between the database models:
 ![Initial ERD](https://github.com/MrLucien-Johnson/Class_enrollment_Project/blob/readme/images/early_erd.png)
+
 Improvements were made to this initial ERD inorder to achive the current working ERD satisfying the join table requirements.
+
 ![Current ERD](https://github.com/MrLucien-Johnson/Class_enrollment_Project/blob/readme/images/currentERD.png)
 
 ## CI Pipeline 
@@ -50,13 +52,14 @@ Running tests thorugh jenkins would sujest that for a build to be successful all
 
 
 ## The App
+once tha application is navigated to, the home screen will be shown. Displaying the contents of the database and providing a navigation bar to add and delete students and classes.
+![HomePage] (https://github.com/MrLucien-Johnson/Class_enrollment_Project/blob/readme/images/homepage.png)
 
 
 ## Known Issues
 * Linked table had not been utilised 
 * Jenkins not setup with SystemD
 * No external databse
-
 
 ## Future Work
 There are a number of future improvements needed on this project.
