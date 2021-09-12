@@ -18,14 +18,15 @@ This web application must have CRUD (create, read, update and delete) functional
 
 ## App Design
 The applicaiton i have chosen to build will be a student class enrollment system which allows users to create a user name (create functionality) update their user information (update functionality), create a class (create functionality), remove a student from the list(delete functionality) update the list of classes information (update functionality) view a range of classes (read functionality), select a number of classes to attend (update functionality) and remove the selected class from class list (delete functionality)
-
+An initial ERD sample design was instructed to gauge the relations between the database models:
 ![Initial ERD](https://github.com/MrLucien-Johnson/Class_enrollment_Project/blob/readme/images/early_erd.png)
-
+Improvements were made to this initial ERD inorder to achive the current working ERD satisfying the join table requirements.
 ![Current ERD](https://github.com/MrLucien-Johnson/Class_enrollment_Project/blob/readme/images/currentERD.png)
 
 ## CI Pipeline 
 Due to the technical nature of this project and in order to ensure continuous integration and delivery, i found it important to utilise CI pipelining.
-These in for of version controll, using git hub and working on brnaches. The project stored on an online git repo allowing the use in different environments especially that is is an aim to be able to run this application on an AWS ect instance while utilising jenkins. Project tracking in which i used a trello kanban board. This board included my user stories in which i worked out my story points utilising MoSCow (Must, Should,could have)
+Version controll was utilised, using github and working on brnaches. The project is stored on an online git repository allowing the use in different environments especially. The aim is to be able to run this application on an AWS ec2 instance while utilising jenkins. Project tracking in which i used a trello kanban board. This board included my user stories in which i worked out my story points utilising MoSCow (Must, Should,could have)
+![Trello](https://github.com/MrLucien-Johnson/Class_enrollment_Project/blob/readme/images/trello.png)
 
 Jenkins has be used as a build server which specialises in automation and testing. For this project it was deemed neccessary that the project type would be that of a freestyle project which executes the test.sh script when it recieves a webhook from github any time a commit is made and pushed. When building using jenkins the build will not complete as the flask application will show as a running process and therefore would not be able to complete and close the build.
 
