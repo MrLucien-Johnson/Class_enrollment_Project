@@ -47,21 +47,6 @@ def addStudent():
         return render_template('addStudent.html', form=form)
 
 
-@app.route('/updateStudent', methods=['GET', 'POST'])
-def updateStudent():
-    form = StudentForm()         
-    allStudents = Student.query.all()   
-    #The drop down field will display student names
-    for student in allStudents:
-        form.student_name.choices.append(
-            (student.student_name, f"{student.student_name}")      
-        ) 
-    if request.method == 'POST' and form.validate_on_submit():      
-        chosenStudent = Student.query.filter_by(student_name=form.student_name.data).first()      
-        chosenStudentName = chosenStudent.student_name
-        return render_template('updateStudent.html', chosenStudentName=chosenStudentName, form=form)  
-    return render_template('updateStudent.html', form=form)
-
 
 @app.route('/updateStudentInfo/<int:id>', methods=['GET', 'POST'])
 def updateStudentInfo(id):
@@ -99,18 +84,6 @@ def updateClassesInfo(id):
         return render_template('updateClassesInfo.html', chosenClassesId=chosenClassesId, form=form )
     return render_template('updateClassesInfo.html', form=form)
 
-@app.route('/updateClasses', methods=['GET', 'POST'])
-def updateClasses():
-    form = UpdateClassesForm()
-    allClasses = Classes.query.all()
-    for classes in allClasses:   
-        form.classes_id.choices.append(
-            (classes.id, f"{classes.Classes_name} {classes.Classes_day}")
-        )
-    if request.method == 'POST' and form.validate_on_submit():
-        chosenClassesId = form.Classes_id.data
-        return redirect(url_for('updateClassesInfo', chosenClassesId=chosenClassesId))
-    return render_template('updateClasses.html', form=form)
 
 @app.route('/deleteStudent', methods=['GET', 'POST'])
 def deleteStudent():
