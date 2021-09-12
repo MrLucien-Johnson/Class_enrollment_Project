@@ -30,8 +30,9 @@ Version controll was utilised, using github and working on brnaches. The project
 
 Jenkins has be used as a build server which specialises in automation and testing. For this project it was deemed neccessary that the project type would be that of a freestyle project which executes the test.sh script when it recieves a webhook from github any time a commit is made and pushed. When building using jenkins the build will not complete as the flask application will show as a running process and therefore would not be able to complete and close the build.
 
+![Jenkins](https://github.com/MrLucien-Johnson/Class_enrollment_Project/blob/readme/images/CI-with-Jenkins-Git.png)
 
- The utilisation of systemD service, which is to run the flask application through jenkins onto the system that it is being accessed from. This would in turn allow the build to succeed by replacing program files which allow the running of the flask application as a process on the system. 
+The utilisation of systemD service, which is to run the flask application through jenkins onto the system that it is being accessed from. This would in turn allow the build to succeed by replacing program files which allow the running of the flask application as a process on the system. 
 
 ## Risk Assessment
 
