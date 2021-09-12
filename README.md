@@ -30,13 +30,32 @@ These in for of version controll, using git hub and working on brnaches. The pro
 Jenkins will be used as a build server which specialises in automation and testing. For this project it was deemed neccessary that the project type would be that of a freestyle project which executes the test.sh script when it recieves a webhook from github any time a commit is made and pushed.
 
 ## Risk Assessment
+In order to identify risks and propose measures to control these risks, a risk assessment was undertaken prior to building the app. Then in the flask app these identified measures could then be implemented. 
+Risk assessment: 
+
+![RiskAssesment](https://github.com/MrLucien-Johnson/Class_enrollment_Project/blob/readme/images/riskassesment.png)
 
 ## Testing
+An essential part of the development process was testing the app :  
+* To ensure that the CRUD (create, read, update and delete) functionality worked as intended, unit tests were written. Unit tests test the units of functionality within the app. ie. the functions of the app.
+![TestsCoverage](https://github.com/MrLucien-Johnson/Class_enrollment_Project/blob/readme/images/TestsCoverage.png)
+This image shows the tests being ran and the output of tests success, showing 81% coverage overall. 
+
+Running tests thorugh jenkins would sujest that for a build to be successful all tests must pass, any single failed test marks the build overall as failed.
+
 
 ## The App
 
-## Updates
 
 ## Known Issues
+* Linked table had not been utilised 
+* Jenkins not setup with SystemD
+* No external databse
+
 
 ## Future Work
+There are a number of future improvements needed on this project.
+Utilising the linked table to add a student and a class to create a booking. This would make the program usable in an enrollment environment. The database model has been successfully created and can be utilised however front end will need to be improved.
+
+* UI UX - The look and feel of the application is very simplistic and could do with an overhaul on design
+* Create and link external databse hiding secrets using env
