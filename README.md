@@ -59,6 +59,21 @@ Running tests thorugh jenkins would sujest that for a build to be successful all
 once tha application is navigated to, the home screen will be shown. Displaying the contents of the database and providing a navigation bar to add and delete students and classes.
 ![HomePage] (https://github.com/MrLucien-Johnson/Class_enrollment_Project/blob/readme/images/homepage.png)
 
+To choose to populate the database and add a student once clicked on the href in the navigation bar you will be redirected to :
+![AddStudent](https://github.com/MrLucien-Johnson/Class_enrollment_Project/blob/readme/images/addstudent.png)
+
+To choose to populate the database and add classes once clicked on the href in the navigation bar you will be redirected to :
+![AddClasses](https://github.com/MrLucien-Johnson/Class_enrollment_Project/blob/readme/images/addclasses.png)
+
+To choose to remove Students from the database and add classes once clicked on the href in the navigation bar you will be redirected to :
+![DeleteStudent](https://github.com/MrLucien-Johnson/Class_enrollment_Project/blob/readme/images/deletestudent.png)
+
+To choose to remove Classes from the database and add classes once clicked on the href in the navigation bar you will be redirected to :
+![DeleteClasses](https://github.com/MrLucien-Johnson/Class_enrollment_Project/blob/readme/images/deleteclasses.png)
+
+To update a class or student an update button will be present for each record and will redirect you to the student/classes update pages respectively:
+![UpdateStudent](https://github.com/MrLucien-Johnson/Class_enrollment_Project/blob/readme/images/updatestudent.png)
+![UpdateClasses](https://github.com/MrLucien-Johnson/Class_enrollment_Project/blob/readme/images/updateclasses.png)
 
 ## Known Issues
 * Linked table had not been utilised 
