@@ -35,6 +35,10 @@ Jenkins has be used as a build server which specialises in automation and testin
 The utilisation of systemD service, which is to run the flask application through jenkins onto the system that it is being accessed from. This would in turn allow the build to succeed by replacing program files which allow the running of the flask application as a process on the system. 
 
 ## Risk Assessment
+In order to identify risks and propose measures to control these risks, a risk assessment was undertaken prior to building the app. Then in the flask app these identified measures could then be implemented. 
+Risk assessment: 
+
+![RiskAssesment](https://github.com/MrLucien-Johnson/Class_enrollment_Project/blob/readme/images/riskassesment.png)
 
 ## Testing
 
